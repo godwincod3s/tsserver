@@ -1,5 +1,5 @@
 const express = require("express");
-const cors = require("cors");
+// const cors = require("cors");
 require("dotenv").config();
 
 /* internal import */
@@ -18,14 +18,14 @@ const storeRoute = require("./routes/store.route");
 const app = express();
 
 /* middleware connections */
-app.use(
-  cors({
-    origin: "*",
-    methods: "GET, PATCH, POST, DELETE",
-    preflightContinue: false,
-    optionsSuccessStatus: 204,
-  })
-);
+// app.use(
+//   cors({
+//     origin: "*",
+//     methods: "GET, PATCH, POST, DELETE",
+//     preflightContinue: false,
+//     optionsSuccessStatus: 204,
+//   })
+// );
 app.use(express.json());
 
 /* router level connections */
